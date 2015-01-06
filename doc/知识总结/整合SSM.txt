@@ -1,76 +1,76 @@
-ÕûºÏspring+springMVC+Mybatis
+ï»¿æ•´åˆspring+springMVC+Mybatis
 
-***spring jar°üÏÂÔØ£ºhttp://maven.springframework.org/release/org/springframework/spring/
-***¿ª·¢Ê±£¬Ìí¼ÓspringÏÂËùÓĞjar°ü£¬¿ª·¢½áÊøºó£¬Ê¹ÓÃclasspath helper/classpathcheckerµ÷ÓÅ²å¼şÀ´É¾³ı¶àÓàµÄjar°ü¡£
+***spring jaråŒ…ä¸‹è½½ï¼šhttp://maven.springframework.org/release/org/springframework/spring/
+***å¼€å‘æ—¶ï¼Œæ·»åŠ springä¸‹æ‰€æœ‰jaråŒ…ï¼Œå¼€å‘ç»“æŸåï¼Œä½¿ç”¨classpath helper/classpathcheckerè°ƒä¼˜æ’ä»¶æ¥åˆ é™¤å¤šä½™çš„jaråŒ…ã€‚
 
-***ÒªµãÒ»£ºjar°üÕûºÏ(spring3.2.13,Mybatis3.2.1¡¢Mybatis-Spring1.1.1)
-***Òªµã¶ş£ºÅäÖÃÎÄ¼ş
+***è¦ç‚¹ä¸€ï¼šjaråŒ…æ•´åˆ(spring3.2.13,Mybatis3.2.1ã€Mybatis-Spring1.1.1)
+***è¦ç‚¹äºŒï¼šé…ç½®æ–‡ä»¶
 
-1. jar°ü£ºĞèÒªÁË½â¸÷¸öjar°üÖ®¼äµÄ¹ØÁª¹ØÏµ¼°Æä×÷ÓÃ
+1. jaråŒ…ï¼šéœ€è¦äº†è§£å„ä¸ªjaråŒ…ä¹‹é—´çš„å…³è”å…³ç³»åŠå…¶ä½œç”¨
 
-	1.1	Spring¡ª¡ªjar°üÏê½â
+	1.1	Springâ€”â€”jaråŒ…è¯¦è§£
 	
-		org.springframework.aop ¡ª¡ªSpringµÄÃæÏòÇĞÃæ±à³Ì£¬Ìá¹©AOP£¨ÃæÏòÇĞÃæ±à³Ì£©µÄÊµÏÖ
+		org.springframework.aop â€”â€”Springçš„é¢å‘åˆ‡é¢ç¼–ç¨‹ï¼Œæä¾›AOPï¼ˆé¢å‘åˆ‡é¢ç¼–ç¨‹ï¼‰çš„å®ç°
 		
-		org.springframework.asm¡ª¡ªspring 2.5.6µÄÊ±ºòĞèÒªasm jar°ü£¬spring3.0¿ªÊ¼Ìá¹©Ëü×Ô¼º¶ÀÁ¢µÄasm jar°ü
+		org.springframework.asmâ€”â€”spring 2.5.6çš„æ—¶å€™éœ€è¦asm jaråŒ…ï¼Œspring3.0å¼€å§‹æä¾›å®ƒè‡ªå·±ç‹¬ç«‹çš„asm jaråŒ…
 		
-		org.springframework.aspects¡ª¡ªSpringÌá¹©µÄ¶ÔAspectJ¿ò¼ÜµÄÕûºÏ
+		org.springframework.aspectsâ€”â€”Springæä¾›çš„å¯¹AspectJæ¡†æ¶çš„æ•´åˆ
 		
-		org.springframework.beans¡ª¡ªËùÓĞÓ¦ÓÃ¶¼ÓÃµ½£¬°üº¬·ÃÎÊÅäÖÃÎÄ¼ş£¬´´½¨ºÍ¹ÜÀíbeanµÈ£¬ÊÇSpring IOCµÄ»ù´¡ÊµÏÖ¡£
+		org.springframework.beansâ€”â€”æ‰€æœ‰åº”ç”¨éƒ½ç”¨åˆ°ï¼ŒåŒ…å«è®¿é—®é…ç½®æ–‡ä»¶ï¼Œåˆ›å»ºå’Œç®¡ç†beanç­‰ï¼Œæ˜¯Spring IOCçš„åŸºç¡€å®ç°ã€‚
 		
-		org.springframework.context.support¡ª¡ªSpring contextµÄÀ©Õ¹Ö§³Ö£¬ÓÃÓÚMVC·½Ãæ
+		org.springframework.context.supportâ€”â€”Spring contextçš„æ‰©å±•æ”¯æŒï¼Œç”¨äºMVCæ–¹é¢
 		
-		org.springframework.context¡ª¡ªÌá¹©ÔÚ»ù´¡IOC¹¦ÄÜÉÏµÄÀ©Õ¹·şÎñ£¬´ËÍâ»¹Ìá¹©Ğí¶àÆóÒµ¼¶·şÎñµÄÖ§³Ö£¬ÓĞÓÊ¼ş·şÎñ¡¢ÈÎÎñµ÷¶È¡¢JNDI¶¨Î»£¬EJB¼¯³É¡¢Ô¶³Ì·ÃÎÊ¡¢»º´æÒÔ¼°¶àÖÖÊÓÍ¼²ã¿ò¼ÜµÄÖ§³Ö¡£
+		org.springframework.contextâ€”â€”æä¾›åœ¨åŸºç¡€IOCåŠŸèƒ½ä¸Šçš„æ‰©å±•æœåŠ¡ï¼Œæ­¤å¤–è¿˜æä¾›è®¸å¤šä¼ä¸šçº§æœåŠ¡çš„æ”¯æŒï¼Œæœ‰é‚®ä»¶æœåŠ¡ã€ä»»åŠ¡è°ƒåº¦ã€JNDIå®šä½ï¼ŒEJBé›†æˆã€è¿œç¨‹è®¿é—®ã€ç¼“å­˜ä»¥åŠå¤šç§è§†å›¾å±‚æ¡†æ¶çš„æ”¯æŒã€‚
 		
-		org.springframework.core¡ª¡ªSpringµÄºËĞÄ¹¤¾ß°ü£¬ÆäËû°üÒÀÀµ´Ë°ü
+		org.springframework.coreâ€”â€”Springçš„æ ¸å¿ƒå·¥å…·åŒ…ï¼Œå…¶ä»–åŒ…ä¾èµ–æ­¤åŒ…
 		
-		org.springframework.expression¡ª¡ªSpring±í´ïÊ½ÓïÑÔ
+		org.springframework.expressionâ€”â€”Springè¡¨è¾¾å¼è¯­è¨€
 		
-		org.springframework.instrument.tomcat¡ª¡ªSpring¶ÔtomcatÁ¬½Ó³ØµÄ¼¯³É
+		org.springframework.instrument.tomcatâ€”â€”Springå¯¹tomcatè¿æ¥æ± çš„é›†æˆ
 		
-		org.springframework.instrument¡ª¡ªSpring¶Ô·şÎñÆ÷µÄ´úÀí½Ó¿Ú
+		org.springframework.instrumentâ€”â€”Springå¯¹æœåŠ¡å™¨çš„ä»£ç†æ¥å£
 		
-		org.springframework.jdbc¡ª¡ª¶ÔJDBC µÄ¼òµ¥·â×°
+		org.springframework.jdbcâ€”â€”å¯¹JDBC çš„ç®€å•å°è£…
 		
-		org.springframework.jms¡ª¡ªÎª¼ò»¯jms apiµÄÊ¹ÓÃ¶ø×öµÄ¼òµ¥·â×°
+		org.springframework.jmsâ€”â€”ä¸ºç®€åŒ–jms apiçš„ä½¿ç”¨è€Œåšçš„ç®€å•å°è£…
 		
-		org.springframework.orm¡ª¡ªÕûºÏµÚÈı·½µÄormÊµÏÖ£¬Èçhibernate£¬ibatis£¬jdoÒÔ¼°spring µÄjpaÊµÏÖ
+		org.springframework.ormâ€”â€”æ•´åˆç¬¬ä¸‰æ–¹çš„ormå®ç°ï¼Œå¦‚hibernateï¼Œibatisï¼Œjdoä»¥åŠspring çš„jpaå®ç°
 		
-		org.springframework.oxm¡ª¡ªSpring¶ÔÓÚobject/xmlÓ³ÉäµÄÖ§³Ö£¬¿ÉÒÔÈÃJAVAÓëXMLÖ®¼äÀ´»ØÇĞ»»
+		org.springframework.oxmâ€”â€”Springå¯¹äºobject/xmlæ˜ å°„çš„æ”¯æŒï¼Œå¯ä»¥è®©JAVAä¸XMLä¹‹é—´æ¥å›åˆ‡æ¢
 		
-		org.springframework.test¡ª¡ª¶ÔJUNITµÈ²âÊÔ¿ò¼ÜµÄ¼òµ¥·â×°
+		org.springframework.testâ€”â€”å¯¹JUNITç­‰æµ‹è¯•æ¡†æ¶çš„ç®€å•å°è£…
 		
-		org.springframework.transaction¡ª¡ªÎªJDBC,HIBERNATE,JDOºÍJPAÌá¹©µÄÒ»ÖÂĞÔµÄÉùÃ÷Ê½ºÍ¼òµ¥±à³ÌÊ½ÊÂÎñ¹ÜÀí
+		org.springframework.transactionâ€”â€”ä¸ºJDBC,HIBERNATE,JDOå’ŒJPAæä¾›çš„ä¸€è‡´æ€§çš„å£°æ˜å¼å’Œç®€å•ç¼–ç¨‹å¼äº‹åŠ¡ç®¡ç†
 		
-		org.springframework.web.portlet¡ª¡ªSpring MVCµÄÔöÇ¿
+		org.springframework.web.portletâ€”â€”Spring MVCçš„å¢å¼º
 		
-		org.springframework.web.servlet¡ª¡ª¶ÔJ2EE6.0 servlet3.0µÄÖ§³Ö
+		org.springframework.web.servletâ€”â€”å¯¹J2EE6.0 servlet3.0çš„æ”¯æŒ
 		
-		org.springframework.web.struts¡ª¡ªÕûºÏstruts¿ò¼ÜµÄÖ§³Ö£¬¿ÉÒÔ¸ü·½±ã¸üÈİÒ×µÄ¼¯³ÉStruts¿ò¼Ü¡£
+		org.springframework.web.strutsâ€”â€”æ•´åˆstrutsæ¡†æ¶çš„æ”¯æŒï¼Œå¯ä»¥æ›´æ–¹ä¾¿æ›´å®¹æ˜“çš„é›†æˆStrutsæ¡†æ¶ã€‚
 		
-		org.springframework.web¡ª¡ª°üº¬WebÓ¦ÓÃ¿ª·¢Ê±£¬ÓÃµ½Spring¿ò¼ÜÊ±ËùĞèµÄºËĞÄÀà£¬°üÀ¨×Ô¶¯ÔØÈëWebApplicationContextÌØĞÔµÄÀà¡¢StrutsÓëJSF¼¯³ÉÀà¡¢ÎÄ¼şÉÏ´«µÄÖ§³ÖÀà¡¢FilterÀàºÍ´óÁ¿¹¤¾ß¸¨ÖúÀà¡£
+		org.springframework.webâ€”â€”åŒ…å«Webåº”ç”¨å¼€å‘æ—¶ï¼Œç”¨åˆ°Springæ¡†æ¶æ—¶æ‰€éœ€çš„æ ¸å¿ƒç±»ï¼ŒåŒ…æ‹¬è‡ªåŠ¨è½½å…¥WebApplicationContextç‰¹æ€§çš„ç±»ã€Strutsä¸JSFé›†æˆç±»ã€æ–‡ä»¶ä¸Šä¼ çš„æ”¯æŒç±»ã€Filterç±»å’Œå¤§é‡å·¥å…·è¾…åŠ©ç±»ã€‚
 		
-	Spring°üÒÀÀµËµÃ÷:
+	SpringåŒ…ä¾èµ–è¯´æ˜:
 	
-		1) spring-core.jarĞècommons-collections.jar£¬spring-core.jarÊÇÒÔÏÂÆäËü¸÷¸öµÄ»ù±¾¡£
-		2) spring-beans.jarĞèspring-core.jar£¬cglib-nodep-2.1_3.jar
-		3) spring-aop.jarĞèspring-core.jar£¬spring-beans.jar£¬cglib-nodep-2.1_3.jar£¬aopalliance.jar
-		4) spring-context.jarĞèspring-core.jar£¬spring-beans.jar£¬spring-aop.jar£¬commons-collections.jar£¬aopalliance.jar
-		5) spring-dao.jarĞèspring-core.jar£¬spring-beans.jar£¬spring-aop.jar£¬spring-context.jar
-		6) spring-jdbc.jarĞèspring-core.jar£¬spring-beans.jar£¬spring-dao.jar
-		7) spring-web.jarĞèspring-core.jar£¬spring-beans.jar£¬spring-context.jar
-		8) spring-webmvc.jarĞèspring-core.jar/spring-beans.jar/spring-context.jar/spring-web.jar
-		9) spring -hibernate.jarĞèspring-core.jar£¬spring-beans.jar£¬spring-aop.jar£¬spring- dao.jar£¬spring-jdbc.jar£¬spring-orm.jar£¬spring-web.jar£¬spring-webmvc.jar
-		10) spring-orm.jarĞèspring-core.jar£¬spring-beans.jar£¬spring-aop.jar£¬spring- dao.jar£¬spring-jdbc.jar£¬spring-web.jar£¬spring-webmvc.jar
-		11) spring -remoting.jarĞèspring-core.jar£¬spring-beans.jar£¬spring-aop.jar£¬spring- dao.jar£¬spring-context.jar£¬spring-web.jar£¬spring-webmvc.jar
-		12) spring-support.jarĞèspring-core.jar£¬spring-beans.jar£¬spring-aop.jar£¬spring-dao.jar£¬spring-context.jar£¬spring-jdbc.jar
-		13) spring-mock.jarĞèspring-core.jar£¬spring-beans.jar£¬spring-dao.jar£¬spring-context.jar£¬spring-jdbc.jar 
+		1) spring-core.jaréœ€commons-collections.jarï¼Œspring-core.jaræ˜¯ä»¥ä¸‹å…¶å®ƒå„ä¸ªçš„åŸºæœ¬ã€‚
+		2) spring-beans.jaréœ€spring-core.jarï¼Œcglib-nodep-2.1_3.jar
+		3) spring-aop.jaréœ€spring-core.jarï¼Œspring-beans.jarï¼Œcglib-nodep-2.1_3.jarï¼Œaopalliance.jar
+		4) spring-context.jaréœ€spring-core.jarï¼Œspring-beans.jarï¼Œspring-aop.jarï¼Œcommons-collections.jarï¼Œaopalliance.jar
+		5) spring-dao.jaréœ€spring-core.jarï¼Œspring-beans.jarï¼Œspring-aop.jarï¼Œspring-context.jar
+		6) spring-jdbc.jaréœ€spring-core.jarï¼Œspring-beans.jarï¼Œspring-dao.jar
+		7) spring-web.jaréœ€spring-core.jarï¼Œspring-beans.jarï¼Œspring-context.jar
+		8) spring-webmvc.jaréœ€spring-core.jar/spring-beans.jar/spring-context.jar/spring-web.jar
+		9) spring -hibernate.jaréœ€spring-core.jarï¼Œspring-beans.jarï¼Œspring-aop.jarï¼Œspring- dao.jarï¼Œspring-jdbc.jarï¼Œspring-orm.jarï¼Œspring-web.jarï¼Œspring-webmvc.jar
+		10) spring-orm.jaréœ€spring-core.jarï¼Œspring-beans.jarï¼Œspring-aop.jarï¼Œspring- dao.jarï¼Œspring-jdbc.jarï¼Œspring-web.jarï¼Œspring-webmvc.jar
+		11) spring -remoting.jaréœ€spring-core.jarï¼Œspring-beans.jarï¼Œspring-aop.jarï¼Œspring- dao.jarï¼Œspring-context.jarï¼Œspring-web.jarï¼Œspring-webmvc.jar
+		12) spring-support.jaréœ€spring-core.jarï¼Œspring-beans.jarï¼Œspring-aop.jarï¼Œspring-dao.jarï¼Œspring-context.jarï¼Œspring-jdbc.jar
+		13) spring-mock.jaréœ€spring-core.jarï¼Œspring-beans.jarï¼Œspring-dao.jarï¼Œspring-context.jarï¼Œspring-jdbc.jar 
 		
-	1.2 MybatisËùĞèjar°ü
-			¸ù¾İ¹Ù·½µÄËµ·¨£¬ÔÚibatis3£¬Ò²¾ÍÊÇMybatis3ÎÊÊÀÖ®Ç°£¬Spring3µÄ¿ª·¢¹¤×÷¾ÍÒÑ¾­Íê³ÉÁË£¬ËùÒÔSpring3ÖĞ»¹ÊÇ
-		Ã»ÓĞ¶ÔMybatis3µÄÖ§³Ö¡£Òò´ËÓÉMybatisÉçÇø×Ô¼º¿ª·¢ÁËÒ»¸öMybatis-SpringÓÃÀ´Âú×ãMybatisÓÃ»§ÕûºÏ
-		SpringµÄĞèÇó¡£
+	1.2 Mybatisæ‰€éœ€jaråŒ…
+			æ ¹æ®å®˜æ–¹çš„è¯´æ³•ï¼Œåœ¨ibatis3ï¼Œä¹Ÿå°±æ˜¯Mybatis3é—®ä¸–ä¹‹å‰ï¼ŒSpring3çš„å¼€å‘å·¥ä½œå°±å·²ç»å®Œæˆäº†ï¼Œæ‰€ä»¥Spring3ä¸­è¿˜æ˜¯
+		æ²¡æœ‰å¯¹Mybatis3çš„æ”¯æŒã€‚å› æ­¤ç”±Mybatisç¤¾åŒºè‡ªå·±å¼€å‘äº†ä¸€ä¸ªMybatis-Springç”¨æ¥æ»¡è¶³Mybatisç”¨æˆ·æ•´åˆ
+		Springçš„éœ€æ±‚ã€‚
 		
-		Mybatis3.2.1:Ä¿Ç°×îĞÂ°æ±¾ÊÇ3.2.8£¬ÆóÒµÀïÊ¹ÓÃ3.2.1°æ±¾½Ï¶à
+		Mybatis3.2.1:ç›®å‰æœ€æ–°ç‰ˆæœ¬æ˜¯3.2.8ï¼Œä¼ä¸šé‡Œä½¿ç”¨3.2.1ç‰ˆæœ¬è¾ƒå¤š
 		Mybatis-Spring1.1.1
 	
