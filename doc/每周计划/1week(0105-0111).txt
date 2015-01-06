@@ -1,0 +1,2 @@
+1. 搭建好github
+2. 搭建好spring+springMVC+Myibatis
