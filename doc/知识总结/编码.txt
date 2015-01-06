@@ -1,0 +1,14 @@
+一：eclipse修改编码的方式
+	1. 编码修改：已有的gbk文件，可以通过文件另存为方式改为utf-8/写代码转换
+	
+	2. 改变整个工作空间的编码格式，这样以后新建的文件也是新设置的编码格式。
+	　　  eclipse->window->preferences->General->workspace->Other->UTF-8->OK
+	
+	3. 项目范围的设置编码格式
+	   Project->Properties->General->Resource->Other->UTF-8->OK
+	   
+	4. 某类型文件的编码格式
+	   eclipse->window->preferences->General->Content Types->右边找到要修改的文件的类型(JAVA,JSP等等)->在下面的Default encoding，输入框中输入UTF-8->Update->OK
+	   
+	5. 单个文件设置编码格式
+	          在包资源管理器右键点击文件->属性，改变文本文件编码格式为UTF-8
