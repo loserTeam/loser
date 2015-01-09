@@ -1,0 +1,33 @@
+一：介绍
+	1.使用slf4j+logback的优势： 
+		支持按文件大小或基于时间的切分方式，可自定义命名模式 
+		支持文件打包(触发器方式） 
+		支持OSGI环境 
+		如果在单纯的logging环境中，使用SLF4J意义不大。如果想在各种logger API中切换，SELF4J是理想选择，另外在新的项目中，使用SLF4J+Logback是比较好的日志框架选型。
+	2. SLF4J
+		SLF4J是简单的日志外观模式框架，抽象了各种日志框架例如Logback、Log4j、Commons-logging和JDK自带的logging实现接口。
+		它使得用户可以在部署时使用自己想要的日志框架。SLF4J是轻量级的，在性能方面几乎是零消耗的。
+		SLF4J没有替代任何日志框架，它仅仅是标准日志框架的外观模式。如果在类路径下除了SLF4J再没有任何日志框架，那么默认状态是在控制台输出日志
+	3. Logback
+		Logback是Log4j的改进版本，而且原生支持SLF4J（因为是同一作者开发的），因此从其它日志框架如Log4j或JDK的logging迁移到Logback是完全可行的。
+		由于Logback原生支持SLF4J，因此Logback＋SLF4J的组合是日志框架的最佳选择，比SLF4J+其它日志框架的组合要快一些。而且Logback的配置可以是XML或Groovy代码。
+		注意一个重要的特性，Logback通过JMX修改日志配置（比如日志级别从Debug调整到INFO），可以从JMX控制台直接操作，无需重启应用程序。
+	
+二：如何搭建
+	1.所需jar包
+		logback下载地址：http://logback.qos.ch/download.html
+			logback-core-1.1.2.jar　： 是核心；
+			logback-classic-1.1.2.jar： 改善了 log4j，且自身实现了 SLF4J API，所以即使用 Logback 你仍然可以使用其他的日志实现，如原始的 Log4J，java.util.logging 等；
+			logback-access-1.1.2.jar ： 让你方便的访问日志信息，如通过 http 的方式
+		slf4j下载地址：http://www.slf4j.org/download.html
+			slf4j-api-1.7.10.jar
+	
+	2.　配置文件:
+		1)在工程resources目录下建立logback.xml
+			1.logback首先会试着查找logback.groovy文件;
+			2.当没有找到时，继续试着查找logback-test.xml文件;
+			3.当没有找到时，继续试着查找logback.xml文件;
+			4.如果仍然没有找到，则使用默认配置（打印到控制台）。
+		
+   *****2)logback.xml属性解析参考配置文件内部
+		

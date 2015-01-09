@@ -1,7 +1,7 @@
 ﻿整合spring+springMVC+Mybatis
 
 ***spring jar包下载：http://maven.springframework.org/release/org/springframework/spring/
-***开发时，添加spring下所有jar包，开发结束后，使用classpath helper/classpathchecker调优插件来删除多余的jar包。
+***开发时，先添加spring下所有jar包，开发结束后，使用classpath helper/classpathchecker调优插件来删除多余的jar包。
 
 ***要点一：jar包整合(spring3.2.13,Mybatis3.2.1、Mybatis-Spring1.1.1)
 ***要点二：配置文件
@@ -70,7 +70,8 @@
 			根据官方的说法，在ibatis3，也就是Mybatis3问世之前，Spring3的开发工作就已经完成了，所以Spring3中还是
 		没有对Mybatis3的支持。因此由Mybatis社区自己开发了一个Mybatis-Spring用来满足Mybatis用户整合
 		Spring的需求。
-		
+		官网：http://mybatis.github.io/
 		Mybatis3.2.1:目前最新版本是3.2.8，企业里使用3.2.1版本较多
 		Mybatis-Spring1.1.1
 	
+2. 配置文件

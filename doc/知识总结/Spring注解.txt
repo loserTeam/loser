@@ -1,0 +1,31 @@
+1. 自动开启注解支持
+	<context:component-scan base-package="test" />
+	<context:component-scan>标签来表示需要自动注册Bean定义，将自动开启“注解实现Bean依赖注入”支持，
+	而通过base-package属性指定扫描的类路径位置
+	
+	该配置项其实也包含了自动注入上述processor的功能，因此当使用 <context:component-scan/> 后，
+	就可以将 <context:annotation-config/> 移除了。
+
+2. 定义spring管理bean
+	@Component
+	@Repository：数据访问层
+	@Service：业务逻辑层
+	@Controller：表现层
+	1)放在类的上方
+		@Component：是个一般性的注解，使用此注解修饰的POJO类，即成为spring容器管理的组件，
+		@Repository,@Service,@Controller这三个则是更语义化的注解，分别指名修饰的相应类为持久层，服务层和展示层组件
+	
+	2)三种写法：
+		@Component, @Component(value="aComponent"),@Component("aComponent")  
+		@Component有一个value属性，可以用来指定bean的名字，与xml文件中元素中的id含义相同，
+		 也可以省略掉value，直接写组件的名字，就像最后一个示例一样。如果不指定bean的名字，则spring会使用默认的
+		 BeanNameGenerator策略类来生成bean的名字，为小写开头的非限定类名，比如第一个示例的bean名字为myComponent。
+	
+	3）扩展@Component
+	@Component注解还可以与注解@Qualifier,@Scope,@Lazy，@Primary,@DependsOn合作进行更细粒度的bean配置。
+	
+3. 使用注解注入依赖的bean
+	1)@Autowired
+		@Autowired
+		private UserService userService;
+		

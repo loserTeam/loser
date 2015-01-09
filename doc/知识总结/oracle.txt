@@ -1,0 +1,58 @@
+oracle版本号：11.2.0.1.0
+	查询方式：cmd->sqlplus->dsw/1234->select * from product_component_version;
+登陆账号：dsw/1234,实例：loser
+
+一：创建数据库
+	1.从Windows桌面执行“开始”→“程序”→“Oracle - <ORACLE_HOME_NAME>”→“配置和移置工具”→
+	“Database Configuration Assistant”命令，打开Database Configuration Assistant对话框的欢迎界面
+	
+	2.按下一步创建数据库。
+数据库名：loser
+密码：Loser1234
+F:\app\dsw\product\11.2.0\dbhome_1\NETWORK\ADMIN\tnsnames.ora
+
+二：创建表空间，用户，赋权限
+	1.表空间
+	--创建临时表空间
+	CREATE TEMPORARY TABLESPACE loser_temp
+	TEMPFILE 'E:\loser\tablespace\loser_temp.dbf'
+	SIZE 32M
+	AUTOEXTEND ON
+	NEXT 32M MAXSIZE 2048M
+	EXTENT MANAGEMENT LOCAL;
+	--表空间
+	CREATE TABLESPACE loser
+	DATAFILE 'E:\loser\tablespace\loser.dbf' 
+	size 1024M
+	AUTOEXTEND ON
+	NEXT 32M MAXSIZE 2048M
+	EXTENT MANAGEMENT LOCAL; 
+	--删除表空间  
+	drop tablespace loser including contents and datafiles  
+	--索引表空间
+	CREATE TABLESPACE loser_Index
+	DATAFILE 'E:\loser\tablespace\loser_Index.dbf'
+	SIZE 32M
+	AUTOEXTEND ON
+	NEXT 32M MAXSIZE 2048M
+	EXTENT MANAGEMENT LOCAL; 
+	
+	--2.建用户
+	create user dsw identified by 1234 
+	default tablespace loser
+	TEMPORARY TABLESPACE loser_temp;
+	 
+	--3.赋权
+	GRANT 
+	　　CREATE SESSION, CREATE ANY TABLE, CREATE ANY VIEW ,CREATE ANY INDEX, CREATE ANY PROCEDURE,
+	　　ALTER ANY TABLE, ALTER ANY PROCEDURE,
+	　　DROP ANY TABLE, DROP ANY VIEW, DROP ANY INDEX, DROP ANY PROCEDURE,
+	　　SELECT ANY TABLE, INSERT ANY TABLE, UPDATE ANY TABLE, DELETE ANY TABLE
+	　　TO dsw;
+	GRANT
+	EXP_FULL_DATABASE,IMP_FULL_DATABASE,DBA,CONNECT,RESOURCE,CREATE SESSION TO dsw
+
+三：导出
+exp有三种导出方式：（完全、用户、表） ，只能在cmd中执行，在sqlplus中会报ora-00900错误
+导出用户dsw的所有对象输出到文件中。dsw/1234@loser：账号/密码@实例名称，owner：用户
+exp dsw/1234@loser file=E:/loser/tablespace/test.dmp owner=(dsw)
