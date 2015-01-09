@@ -1,0 +1,26 @@
+1. 加入依赖包
+	右键项目-》build path->Add library -> JUnit
+	Spring Test （Spring框架中的test包）
+	Spring 相关其他依赖包（context等包）
+
+2. 创建测试源目录和包
+	推荐创建一个和src平级的源文件目录
+	
+3. 创建测试类
+	右键类-》new->JUnit Test Case
+	创建一个测试用的类，推荐名称为 “被测试类名称 + Test”
+	1）测试类应该继承与 AbstractJUnit4SpringContextTests 或 AbstractTransactionalJUnit4SpringContextTests
+　	　AbstractTransactionalJUnit4SpringTests:需要用到事务管理（比如要在测试结果出来之后回滚测试内容）,事务管理的使用方法和正常使用Spring事务管理是一样的
+	 AbstractTransactionalJUnitSpringContextTests:声明式事务管理时用，注意需要配置transactionManager bean，参考spring-mybatis.xml.
+	 
+4. 配置测试类
+	添加如下内容在class前，用于配置applicationContext.xml文件的位置。
+	@RunWith(SpringJUnit4ClassRunner.class)
+	@ContextConfiguration(locations = "classpath:spring.xml")
+	
+5. 创建测试方法
+	创建测试用方法，推荐名称为 “被测方法名称+ Test”。
+　　	测试方法上方加入 @Test
+
+6. 通过JUnit 4 执行
+	右键方法名，选择则“Run As”→“JUnit Test”即可

@@ -1,0 +1,17 @@
+数据库连接池有很多选择，c3p、dbcp、proxool等，druid作为一名后起之秀，凭借其出色的性能，也逐渐印入了大家的眼帘。
+
+1. Druid是阿里巴巴开源平台上的一个项目，整个项目由数据库连接池、插件框架和SQL解析器组成。
+	该项目主要是为了扩展JDBC的一些限制，可以让程序员实现一些特殊的需求，比如向密钥服务请求凭证、统计SQL信息、
+	SQL性能收集、SQL注入检查、SQL翻译等，程序员可以通过定制来实现自己需要的功能。
+	
+2. git地址：https://github.com/alibaba/druid
+	常见问题：https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98
+	
+3. jar包下载：
+	druid-1.0.12.jar：http://repo1.maven.org/maven2/com/alibaba/druid/
+	
+4. 简单教程
+	http://blog.csdn.net/yunnysunny/article/details/8657095
+	
+5. 配置文件：
+

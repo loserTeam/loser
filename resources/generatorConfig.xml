@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+	<classPathEntry location="E:\GitHub\loser\webapp\WEB-INF\lib\ojdbc6.jar" />
+	
+	<context id="MyBatis3" targetRuntime="MyBatis3">
+	
+		<commentGenerator> 
+    		<property name="suppressAllComments" value="true" /> 
+ 		</commentGenerator> 
+		
+		<jdbcConnection driverClass="oracle.jdbc.driver.OracleDriver" connectionURL="jdbc:oracle:thin:@zjdwdengsiwen2:1521:loser"
+			userId="dsw" password="1234"> 
+		</jdbcConnection>
+		
+		<javaModelGenerator targetPackage="test.entity" targetProject="E:\GitHub\loser\src">
+		</javaModelGenerator>
+		
+		<sqlMapGenerator targetPackage="test.entity" targetProject="E:\GitHub\loser\src">
+		</sqlMapGenerator>
+
+		<javaClientGenerator type="XMLMAPPER" targetPackage="test.dao"
+			targetProject="E:\GitHub\loser\src">
+		</javaClientGenerator>
+
+		<table tableName="user_test" domainObjectName="UserPo" 
+			enableCountByExample="false" enableUpdateByExample="false" 
+			enableDeleteByExample="false" enableSelectByExample="false" 
+			selectByExampleQueryId="false" >
+			<property name="ignoreQualifiersAtRuntime" value="true" />
+			<property name="runtimeTableName" value="user_test" />
+			<generatedKey  column="ID" sqlStatement="select 1 from dual" />
+		</table>
+	</context>
+</generatorConfiguration>

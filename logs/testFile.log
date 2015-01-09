@@ -1,0 +1,12 @@
+1485 [main] INFO  test.service.impl.UserServiceImpl - ======info
+1490 [main] WARN  test.service.impl.UserServiceImpl - ======warn
+1490 [main] ERROR test.service.impl.UserServiceImpl - ======error
+1490 [main] INFO  test.service.impl.UserServiceImpl - Hello,Aub!
+1494 [main] INFO  test.service.impl.UserServiceImpl - Hello,Aub!   3Q!
+1494 [main] INFO  test.service.impl.UserServiceImpl - Fruit:  apple,banana
+1339 [main] INFO  test.service.impl.UserServiceImpl - ======info
+1343 [main] WARN  test.service.impl.UserServiceImpl - ======warn
+1343 [main] ERROR test.service.impl.UserServiceImpl - ======error
+1343 [main] INFO  test.service.impl.UserServiceImpl - Hello,Aub!
+1345 [main] INFO  test.service.impl.UserServiceImpl - Hello,Aub!   3Q!
+1346 [main] INFO  test.service.impl.UserServiceImpl - Fruit:  apple,banana

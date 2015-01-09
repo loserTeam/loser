@@ -1,0 +1,8 @@
+1. jdbc.properties
+2. spring.xml
+3. spring-mybatis.xml
+4. web.xml
+5. spring-mvc.xml
+
+1)配置前端控制器：DispatcherServlet
+	
