@@ -1,7 +1,11 @@
-springMVC 是如何就能准确的找到controller???
+springMVC 是如何就能准确的找到controller???又是如何转到jsp上的
   -- <form action="<%=request.getContextPath() %>/addInfo.do" method="post">
   --上面这句话当submit时请求会被web.xml中的配置的servlet捕获。然后与@RequestMapping("controller/getAll")
   --比对。这样就能准确找到controller。
+  --return "test/result";当执行到这句话的时候会被spring-mvc.xml中springframework转发出去
+  --<property name="prefix" value="/"/>  <property name="suffix" value=".jsp"/> 
+  -- test/result  在这个路径前面加上/后面加上.jsp。其实最前面还是有一个路径，也就是上下文里的路径
+  --最后完整路径就是====   context+/test/result.jsp这样就能找到具体的jsp
   
   注解：
   @Controller 声明Action组件
