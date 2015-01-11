@@ -1,0 +1,18 @@
+springMVC 是如何就能准确的找到controller???
+  -- <form action="<%=request.getContextPath() %>/addInfo.do" method="post">
+  --上面这句话当submit时请求会被web.xml中的配置的servlet捕获。然后与@RequestMapping("controller/getAll")
+  --比对。这样就能准确找到controller。
+  
+  注解：
+  @Controller 声明Action组件
+  @Service    声明Service组件    @Service("myMovieLister") 
+  @Repository 声明Dao组件
+  @Component   泛指组件, 当不好归类时. 
+  @RequestMapping("/menu")  请求映射
+  @Resource  用于注入，( j2ee提供的 ) 默认按名称装配，
+  @Resource(name="beanName") 
+  @Autowired 用于注入，(srping提供的) 默认按类型装配
+  @Transactional( rollbackFor={Exception.class}) 事务管理
+  @ResponseBody@Scope("prototype")   设定bean的作用域
+  
+  
